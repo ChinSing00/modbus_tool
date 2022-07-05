@@ -1,13 +1,14 @@
 import sys , os ,asyncio,threading,modbus_tk
 #导入上层模块
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
-from modbus_tools.UI.Ui_main import Ui_MainWindow
+print(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+from modbus_tool.UI.Ui_main import Ui_MainWindow
 from PyQt5.QtCore import QTimer,QThread,pyqtSignal
 from PyQt5.QtWidgets import QMainWindow,QApplication,QWidget,QMessageBox ,QLCDNumber
-from modbus_tools.rs485 import modbus_tool
+from modbus_tool.rs485 import modbus_tool
 from time import sleep
 from concurrent.futures import ThreadPoolExecutor
-
+from UI.Ui_main import Ui_MainWindow
 STANDARD_WEIGHT = 400
 
 class win(QMainWindow,Ui_MainWindow):
